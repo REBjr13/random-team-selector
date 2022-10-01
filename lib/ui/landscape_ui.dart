@@ -9,8 +9,8 @@ class LandscapeUI extends StatefulWidget {
 }
 
 class _LandscapeUIState extends State<LandscapeUI> {
-  var play = Image.asset("images/Manutd.png", height: 100, width: 100);
-  var play2 = Image.asset("images/Arsenal.png", height: 100, width: 100);
+  var play = "" ;
+  var play2 = "";
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class _LandscapeUIState extends State<LandscapeUI> {
               padding: const EdgeInsets.all(20.0),
               child: Padding(
                 padding: const EdgeInsets.all(30.0),
-                child: Center(child: play),
+                child: Center(child: Text(play)),
               ),
             ),
             const Text("VS", style: TextStyle(fontSize: 25),),
@@ -32,7 +32,7 @@ class _LandscapeUIState extends State<LandscapeUI> {
               padding: const EdgeInsets.all(20.0),
               child: Padding(
                 padding: const EdgeInsets.all(30.0),
-                child: Center(child: play2),
+                child: Center(child: Text(play2)),
               ),
             ),
 
@@ -40,8 +40,8 @@ class _LandscapeUIState extends State<LandscapeUI> {
               iconSize: 30,
               onPressed: () {
                 setState(() {
-                  play = getRandomImage();
-                  play2 = getRandomImage();
+                  play = getRandomImage() as String;
+                  play2 = getRandomImage() as String;
                 });
               },
               icon: const Icon(Icons.replay_outlined),
